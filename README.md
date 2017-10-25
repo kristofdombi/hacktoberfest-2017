@@ -1,6 +1,6 @@
 # Gatsby Hackathon - Hacktoberfest 2017
 
-> A demo app for trying out Gatsby, Styled Components and to retrive my 4 public PRs 🎃
+> A demo app for trying out Gatsby, Styled Components and to get my 4 public PRs 🎃
 
 You can try it out locally:
 
