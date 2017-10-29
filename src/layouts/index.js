@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import {
   Header,
@@ -15,10 +14,10 @@ const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
       title="Gatsby Hackathon | Hacktoberfest 2017"
-      meta={[
+      meta={ [
         { name: 'description', content: 'Gatsby Hackathon for Hacktoberfest 2017' },
         { name: 'keywords', content: 'gatsby, hackathon, hacktoberfest' },
-      ]}
+      ] }
     />
     <Header>
       <HeaderText>HELLO DREAM TEAM</HeaderText>
@@ -30,8 +29,10 @@ const TemplateWrapper = ({ children }) => (
   </div>
 );
 
+TemplateWrapper.displayName = 'TemplateWrapper';
+
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
-}
+};
 
 export default TemplateWrapper;
