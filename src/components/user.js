@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Link from 'gatsby-link';
 import { Card, StyledLink, Avatar, DetailWrapper } from './styled/styled-elements';
 
 export const User = (props) => (
@@ -15,3 +13,12 @@ export const User = (props) => (
     </Card>
   </StyledLink>
 );
+
+User.displayName = 'User';
+
+User.propTypes = {
+  to: PropTypes.string,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  avatar: PropTypes.string,
+};
