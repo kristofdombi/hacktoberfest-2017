@@ -6,12 +6,7 @@
       "description": "John Snow is a very kind person. He spends his whole life to guard the great wall and keep the monsters outside.",
       "avatar": "http://i.pravatar.cc/150?img=70",
       "email": "Sincere@april.biz",
-      "phone": "010-692-6593 x09125",
-      "company": {
-        "name": "Deckow-Crist",
-        "catchPhrase": "Proactive didactic contingency",
-        "bs": "synergize scalable supply-chains"
-      }
+      "phone": "010-692-6593 x09125"
     },
     {
       "id": "2",
@@ -19,12 +14,7 @@
       "description": "Barack is the 44th president of the United States.",
       "avatar": "http://i.pravatar.cc/150?img=69",
       "email": "Shanna@melissa.tv",
-      "phone": "1-463-123-4447",
-      "company": {
-        "name": "Romaguera-Jacobson",
-        "catchPhrase": "Face to face bifurcated interface",
-        "bs": "e-enable strategic applications"
-      }
+      "phone": "1-463-123-4447"
     },
     {
       "id": "3",
@@ -32,12 +22,7 @@
       "description": "It's just a duck.",
       "avatar": "http://i.pravatar.cc/150?img=47",
       "email": "Nathan@yesenia.net",
-      "phone": "1-463-123-4447",
-      "company": {
-        "name": "Romaguera-Jacobson",
-        "catchPhrase": "Face to face bifurcated interface",
-        "bs": "e-enable strategic applications"
-      }
+      "phone": "1-463-123-4447"
     }
   ]
 }
