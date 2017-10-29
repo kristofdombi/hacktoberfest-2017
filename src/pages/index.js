@@ -1,13 +1,43 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
+import { getUsers } from '../utils/getUsers';
+import { User } from '../components/user';
+import { SectionTitle, UsersWrapper } from '../components/styled/styled-elements';
 
-const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
-)
+class IndexPage extends React.Component {
+  state = {
+    users: []
+  }
 
-export default IndexPage
+  componentDidMount() {
+    getUsers().then(results => this.setState({
+      users: results
+    }));
+  }
+
+  render() {
+    return (
+      <div>
+        <SectionTitle>MEET THE TEAM</SectionTitle>
+        { this.state.users.length === 0
+          ? (<p>Loading...</p>)
+          : <UsersWrapper>
+            { this.state.users.map((user, i) => (
+              <User
+                to={ `/user/${i + 1}` }
+                key={ i }
+                avatar={ user.avatar }
+                name={ user.name }
+                description={ user.description }
+              >
+                hello
+              </User>
+            )) }
+          </UsersWrapper>
+        }
+      </div>
+    );
+  }
+}
+
+export default IndexPage;

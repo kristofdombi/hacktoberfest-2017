@@ -2,19 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
-import styled from 'styled-components';
+import {
+  Header,
+  HeaderText,
+  Wrapper,
+  Footer,
+  FooterText } from '../components/styled/styled-elements';
 
 import './index.css';
-
-const Wrapper = styled.div`
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 0px;
-
-  @media (max-width: 959px) {
-    padding: 0 20px;
-  }
-`
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -25,7 +20,13 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'gatsby, hackathon, hacktoberfest' },
       ]}
     />
+    <Header>
+      <HeaderText>HELLO DREAM TEAM</HeaderText>
+    </Header>
     <Wrapper>{children()}</Wrapper>
+    <Footer>
+      <FooterText>Made with <br />❤️ <br />by Kristof Dombi</FooterText>
+    </Footer>
   </div>
 );
 
