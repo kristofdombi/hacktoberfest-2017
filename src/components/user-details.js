@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { getUsers } from '../utils/getUsers';
 import styled from 'styled-components';
 import { Card, Avatar, DetailWrapper } from './styled/styled-elements';
+import Overdrive from 'react-overdrive';
 
 const DetailedCard = Card.extend`
   cursor: auto;
@@ -52,8 +53,9 @@ export default class UserDetails extends React.Component {
     return (
       <div>{
         !this.state.currentUser
-          ? (<p>Loading...</p>)
-          : (
+        ? (<p>Loading...</p>)
+        : (
+          <Overdrive id={ `${name}-card` } animationDelay={ 1 } duration={ 300 }>
             <DetailedCard>
               <DetailedAvatar src={ avatar } />
               <DetailedWrapper>
@@ -69,7 +71,8 @@ export default class UserDetails extends React.Component {
                 <p>{ phone }</p>
               </DetailedWrapper>
             </DetailedCard>
-          )
+          </Overdrive>
+        )
       }</div>
     );
   }
