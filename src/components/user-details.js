@@ -2,6 +2,7 @@ import React from 'react';
 import { getUsers } from '../utils/getUsers';
 import styled from 'styled-components';
 import { Card, Avatar, DetailWrapper } from './styled/styled-elements';
+import Overdrive from 'react-overdrive';
 
 const DetailedCard = Card.extend`
   cursor: auto;
@@ -52,21 +53,23 @@ export default class UserDetails extends React.Component {
         !this.state.currentUser
         ? (<p>Loading...</p>)
         : (
-          <DetailedCard>
-            <DetailedAvatar src={ avatar } />
-            <DetailedWrapper>
-              <DetailedName>{ name }</DetailedName>
-              <p>{ description }</p>
-            </DetailedWrapper>
-            <DetailedWrapper>
-              <h4>Email:</h4>
-              <a href={`mailto:${email}`}>{ email }</a>
-            </DetailedWrapper>
-            <DetailedWrapper>
-              <h4>Phone:</h4>
-              <p>{ phone }</p>
-            </DetailedWrapper>
-          </DetailedCard>
+          <Overdrive id={ `${name}-card` } animationDelay={ 1 } duration={ 300 }>
+            <DetailedCard>
+              <DetailedAvatar src={ avatar } />
+              <DetailedWrapper>
+                <DetailedName>{ name }</DetailedName>
+                <p>{ description }</p>
+              </DetailedWrapper>
+              <DetailedWrapper>
+                <h4>Email:</h4>
+                <a href={`mailto:${email}`}>{ email }</a>
+              </DetailedWrapper>
+              <DetailedWrapper>
+                <h4>Phone:</h4>
+                <p>{ phone }</p>
+              </DetailedWrapper>
+            </DetailedCard>
+          </Overdrive>
         )
       }</div>
     );
