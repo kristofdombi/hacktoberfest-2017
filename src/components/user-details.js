@@ -53,26 +53,26 @@ export default class UserDetails extends React.Component {
     return (
       <div>{
         !this.state.currentUser
-        ? (<p>Loading...</p>)
-        : (
-          <Overdrive id={ `${name}-card` } animationDelay={ 1 } duration={ 300 }>
-            <DetailedCard>
-              <DetailedAvatar src={ avatar } />
-              <DetailedWrapper>
-                <DetailedName>{ name }</DetailedName>
-                <p>{ description }</p>
-              </DetailedWrapper>
-              <DetailedWrapper>
-                <h4>Email:</h4>
-                <a href={ `mailto:${email}` }>{ email }</a>
-              </DetailedWrapper>
-              <DetailedWrapper>
-                <h4>Phone:</h4>
-                <p>{ phone }</p>
-              </DetailedWrapper>
-            </DetailedCard>
-          </Overdrive>
-        )
+          ? (<p>Loading...</p>)
+          : (
+            <Overdrive id={ `${name}-card` } animationDelay={ 1 } duration={ 300 }>
+              <DetailedCard>
+                <DetailedAvatar src={ avatar } />
+                <DetailedWrapper>
+                  <DetailedName>{ name }</DetailedName>
+                  <p>{ description }</p>
+                </DetailedWrapper>
+                <DetailedWrapper>
+                  <h4>Email:</h4>
+                  <a href={ `mailto:${email}` }>{ email }</a>
+                </DetailedWrapper>
+                <DetailedWrapper>
+                  <h4>Phone:</h4>
+                  <p>{ phone }</p>
+                </DetailedWrapper>
+              </DetailedCard>
+            </Overdrive>
+          )
       }</div>
     );
   }
