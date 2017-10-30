@@ -28,7 +28,7 @@ export const Wrapper = styled.main`
 
 export const Header = styled.header`
   min-height: 500px;
-  background-color: #4f4f4f;
+  background-color: #2196F3;
   display: flex;
   align-items: center;
 `;
@@ -40,11 +40,11 @@ export const HeaderText = styled.h1`
 `;
 
 export const SectionTitle = styled.h2`
-  color: #42FBB6;
+  color: #0D47A1;
 `;
 
 export const Footer = styled.footer`
-  background-color: #3c3c3c;
+  background-color: #1565C0;
   min-height: 150px;
   display: flex;
   align-items: center;
@@ -87,7 +87,7 @@ export const StyledLink = styled(Link)`
 export const Card = styled.div`
   border-radius: 4px;
   background: #fff;
-  box-shadow: 0 5px 20px 0 rgba(66,251,182,.4);
+  box-shadow: 0 5px 20px 0 rgba(33, 150, 243, 0.3);
   padding: 15px;
   display: flex;
   align-items: flex-start;
