@@ -22,9 +22,16 @@
     "watch:db": "json-server --watch db.json",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src"
   },
   "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint": "^3.19.0",
+    "eslint-config-pi": "^12.0.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-react": "^6.10.3",
+    "eslint-watch": "^3.1.3",
     "prettier": "^1.7.4"
   }
 }

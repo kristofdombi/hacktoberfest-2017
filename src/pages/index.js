@@ -1,10 +1,11 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import { getUsers } from '../utils/getUsers';
 import { User } from '../components/user';
 import { SectionTitle, UsersWrapper } from '../components/styled/styled-elements';
 
 class IndexPage extends React.Component {
+  static displayName = 'IndexPage';
+
   state = {
     users: []
   }

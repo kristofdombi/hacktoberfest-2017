@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { getUsers } from '../utils/getUsers';
 import styled from 'styled-components';
 import { Card, Avatar, DetailWrapper } from './styled/styled-elements';
@@ -30,8 +31,10 @@ const DetailedWrapper = DetailWrapper.extend`
 `;
 
 export default class UserDetails extends React.Component {
-  constructor(props) {
-    super(props);
+  static displayName = 'UserDetails';
+
+  static propTypes = {
+    match: PropTypes.object
   }
 
   state = {
@@ -41,9 +44,8 @@ export default class UserDetails extends React.Component {
   componentDidMount() {
     getUsers(this.props.match.params)
       .then(user => this.setState({
-        currentUser: user[0]
-      })
-    );
+        currentUser: user[0]})
+      );
   }
 
   render() {
@@ -62,7 +64,7 @@ export default class UserDetails extends React.Component {
               </DetailedWrapper>
               <DetailedWrapper>
                 <h4>Email:</h4>
-                <a href={`mailto:${email}`}>{ email }</a>
+                <a href={ `mailto:${email}` }>{ email }</a>
               </DetailedWrapper>
               <DetailedWrapper>
                 <h4>Phone:</h4>
