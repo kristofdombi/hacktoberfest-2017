@@ -10,10 +10,11 @@ class IndexPage extends React.Component {
     users: []
   }
 
-  componentDidMount() {
-    getUsers().then(results => this.setState({
-      users: results
-    }));
+  async componentDidMount() {
+    const users = await getUsers();
+    this.setState({
+      users
+    });
   }
 
   render() {
