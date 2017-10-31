@@ -30,9 +30,7 @@ class IndexPage extends React.Component {
                 avatar={ user.avatar }
                 name={ user.name }
                 description={ user.description }
-              >
-                hello
-              </User>
+              />
             )) }
           </UsersWrapper>
         }
