@@ -41,11 +41,11 @@ export default class UserDetails extends React.Component {
     currentUser: {}
   }
 
-  componentDidMount() {
-    getUsers(this.props.match.params)
-      .then(user => this.setState({
-        currentUser: user[0]})
-      );
+  async componentDidMount() {
+    const users = await getUsers(this.props.match.params);
+    this.setState({
+      currentUser: users[0]
+    });
   }
 
   render() {
