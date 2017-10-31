@@ -3,7 +3,7 @@ import withQuery from 'with-query';
 export const getUsers = async (id) => {
   try {
     const resp = await fetch(
-      withQuery('http://localhost:3000/users/', id),
+      withQuery('https://my-json-server.typicode.com/kristof0425/hacktoberfest-2017/users', id),
       {
         method: 'GET',
         'Content-Type': 'application/json',
